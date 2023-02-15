@@ -1,0 +1,17 @@
+arr=[2,4, 10 ,3 ,5 ,4 ,2, 5, 2, 4, 7, 3 ,2]
+dum=[]
+d={}
+for i in arr:
+    if i not in d:
+        d[i]=0
+        dum.append(i)
+    d[i]+=1
+d=sorted(d.items(), key=lambda x: x[1])
+d.reverse()
+d=d[:3]
+dict={}
+for i,j in d:
+    dict[i]=j
+for i in dum:
+    if i in dict:
+        print(i,end=" ")
